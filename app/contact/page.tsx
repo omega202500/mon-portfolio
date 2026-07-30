@@ -1,6 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = "service_dg4putk";
+const TEMPLATE_ID = "template_rq1cijc";
+const PUBLIC_KEY = "qFEn1zPEPoqAW7rI1";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -19,23 +24,25 @@ export default function ContactPage() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || "Une erreur est survenue.");
-      }
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          title: "Nouveau message",
+          time: new Date().toLocaleString("fr-FR"),
+        },
+        PUBLIC_KEY
+      );
 
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
+      console.error("Erreur EmailJS:", err);
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Erreur inconnue.");
+      setErrorMsg("Une erreur est survenue. Réessaie plus tard.");
     }
   }
 

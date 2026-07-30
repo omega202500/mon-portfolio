@@ -6,18 +6,25 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectDetail({
+export default async function ProjectDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return notFound();
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-20">
       <div className="relative h-64 w-full overflow-hidden rounded-xl bg-neutral-800">
-        <Image src={project.image} alt={project.title} fill className="object-cover" />
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
       </div>
       <h1 className="mt-8 text-3xl font-bold">{project.title}</h1>
       <p className="mt-4 text-neutral-400">{project.description}</p>

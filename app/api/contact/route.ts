@@ -1,13 +1,10 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
-    // Validation basique
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Tous les champs sont requis." },
@@ -23,9 +20,17 @@ export async function POST(request: Request) {
       );
     }
 
-    const { data, error } = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>", // à remplacer par ton domaine vérifié plus tard
-      to: process.env.CONTACT_EMAIL!,
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${process.env.GMAIL_USER}>`,
+      to: process.env.CONTACT_EMAIL,
       replyTo: email,
       subject: `Nouveau message de ${name} — Portfolio`,
       html: `
@@ -37,19 +42,11 @@ export async function POST(request: Request) {
       `,
     });
 
-    if (error) {
-      console.error("Erreur Resend:", error);
-      return NextResponse.json(
-        { error: "Échec de l'envoi de l'email." },
-        { status: 500 }
-      );
-    }
-
-    return NextResponse.json({ success: true, data });
+    return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Erreur serveur:", err);
+    console.error("Erreur envoi email:", err);
     return NextResponse.json(
-      { error: "Erreur serveur." },
+      { error: "Échec de l'envoi de l'email." },
       { status: 500 }
     );
   }

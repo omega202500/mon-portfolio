@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Project } from "@/lib/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link
-      href={`/projects/${project.slug}`}
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group block overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900 transition hover:border-emerald-400"
     >
       <div className="relative h-48 w-full bg-neutral-800">
@@ -13,6 +14,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           src={project.image}
           alt={project.title}
           fill
+          sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition group-hover:scale-105"
         />
       </div>
@@ -30,6 +32,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
