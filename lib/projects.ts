@@ -29,7 +29,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "React", "Prisma", "Clerk", "SQLite"],
     image: "/images/taskflow.png",
     link: "https://task-flow.vercel.app/",
-    repo: "https://github.com/omega202500/task-flow"
+    repo: "https://github.com/omega202500/taskflow"
   },
   {
     slug: "tontine",
