@@ -18,7 +18,6 @@ export const projects: Project[] = [
     stack: ["Laravel", "PostgreSQL", "Cordova", "Render"],
     image: "/images/GestComm.jpeg",
     link: "https://gestcomm-6494.onrender.com",
-    repo: "https://github.com/omega202500/gestcomm"
   },
   {
 
@@ -29,9 +28,24 @@ export const projects: Project[] = [
     stack: ["Next.js", "React", "Prisma", "Clerk", "SQLite"],
     image: "/images/taskflow.png",
     link: "https://task-flow.vercel.app/",
-    repo: "https://github.com/omega202500/taskflow"
   },
-  {
+   {
+  slug: "expense-tracker",
+  title: "Expense Tracker",
+description:
+  "Application web full-stack de gestion des finances personnelles développée avec Next.js et Django REST Framework. Elle permet de gérer les revenus et les dépenses, de consulter l'historique des transactions et de suivre l'évolution des finances via un tableau de bord moderne.",
+  stack: [
+    "Next.js",
+    "React",
+    "Django REST Framework",
+    "PostgreSQL",
+    "Axios",
+    "Tailwind CSS"
+  ],
+  image: "/images/full-stack.png",
+  link: "https://full-stack-git-main-omega202500s-projects.vercel.app/",
+},
+    {
     slug: "tontine",
     title: "Tontine App",
     description:
@@ -41,5 +55,15 @@ export const projects: Project[] = [
     link: "https://tontine-app.vercel.app/",
     repo: "https://github.com/omega202500/tontine-app"
   },
-  // Ajoute tes autres projets ici (CamerJob, ProjectFlow, EasyPaie...)
+  {
+  slug: "e-vote",
+  title: "E-VOTE",
+  description:
+    "Application web de vote électronique conçue pour gérer l'ensemble du processus électoral, de l'inscription des électeurs à la publication des résultats. Elle permet la gestion des candidats, des scrutins et assure un suivi sécurisé des votes.",
+  stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript"],
+  image: "/images/E-vote.png",
+  link: "https://yami.infinityfreeapp.com/",
+
+},
+
 ];
