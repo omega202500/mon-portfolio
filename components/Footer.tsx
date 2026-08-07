@@ -1,7 +1,7 @@
 export default function Footer() {
   const socials = [
     {
-      icon: "fa-brands fa-square-linkedin",
+      icon: "fa-brands fa-linkedin",  
       href: "https://www.linkedin.com/in/joël-simo-3a7582399",
       label: "LinkedIn",
     },
