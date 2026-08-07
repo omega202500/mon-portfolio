@@ -49,7 +49,7 @@ description:
     slug: "tontine",
     title: "Tontine App",
     description:
-      "Application de tontine rotative avec backend FastAPI/SQLAlchemy et frontend React Native/Expo, intégration PawaPay pour les paiements mobile money.",
+      "Application mobile de gestion de tontine rotative avec backend FastAPI/SQLAlchemy et frontend React Native/Expo, intégration PawaPay pour les paiements mobile money.",
     stack: ["FastAPI", "React Native", "Expo", "PawaPay"],
     image: "/images/tontine.jpeg",
     // link: "https://tontine-app.vercel.app/",
