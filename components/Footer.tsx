@@ -7,12 +7,12 @@ export default function Footer() {
     },
     {
       icon: "fa-brands fa-facebook",
-      href: "https://facebook.com/tonpseudo",
+      href: "https://facebook.com/joelomega",
       label: "Facebook",
     },
     {
       icon: "fa-brands fa-instagram",
-      href: "https://instagram.com/tonpseudo",
+      href: "https://instagram.com/joelomega",
       label: "Instagram",
     },
     {
