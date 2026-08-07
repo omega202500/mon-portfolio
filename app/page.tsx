@@ -11,10 +11,6 @@ export default function Home() {
       <section className="grid items-center gap-12 lg:grid-cols-2">
         {/* Texte */}
         <div className="order-2 lg:order-1">
-          <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1 text-sm font-medium text-emerald-400">
-            Disponible pour de nouveaux projets
-          </span>
-
           <h1 className="mt-6 text-5xl font-bold leading-tight">
             Salut, je suis <span className="text-emerald-400">Joel Simo</span> 👋
             <br />
