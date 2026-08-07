@@ -13,8 +13,6 @@ export default function Home() {
         <div className="order-2 lg:order-1">
           <h1 className="mt-6 text-5xl font-bold leading-tight">
             Salut, je suis <span className="text-emerald-400">Joel Simo</span> 👋
-            <br />
-            Développeur Full-Stack
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-neutral-400">
