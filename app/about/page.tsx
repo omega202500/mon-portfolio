@@ -14,14 +14,13 @@ export default function AboutPage() {
       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
         {[
           "Laravel",
+          "MySQL",
           "PostgreSQL",
           "Next.js",
-          "Cordova / Capacitor",
+          "Cordova Apache",
           "Node.js",
           "React Native",
           "FastAPI",
-          "Objective-C",
-          "FFmpeg / HLS",
         ].map((skill) => (
           <div
             key={skill}
