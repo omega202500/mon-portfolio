@@ -31,7 +31,7 @@ export default function Home() {
           <div className="mt-10">
             <a
               href="mailto:tonemail@gmail.com"
-              className="btn btn-accent flex w-full items-center justify-center gap-2 lg:w-fit"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-400 px-6 py-3 font-semibold text-black transition hover:bg-emerald-500 lg:w-fit"
             >
               <Mail className="h-5 w-5" />
               Contactez-moi
