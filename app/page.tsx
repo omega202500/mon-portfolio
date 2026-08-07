@@ -1,63 +1,69 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Mail } from "lucide-react";
+
 import { projects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-20">
+    <div className="container mx-auto px-6 py-12">
       {/* Hero */}
-      <section className="grid items-center gap-10 md:grid-cols-2">
+      <section className="grid items-center gap-12 lg:grid-cols-2">
         {/* Texte */}
-        <div className="flex flex-col items-start gap-6">
-          <span className="rounded-full bg-emerald-400/10 px-4 py-1 text-sm text-emerald-400">
+        <div className="order-2 lg:order-1">
+          <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1 text-sm font-medium text-emerald-400">
             Disponible pour de nouveaux projets
           </span>
-          <h1 className="text-4xl font-bold sm:text-5xl">
-            Salut, je suis Joel Simo 👋<br />
+
+          <h1 className="mt-6 text-5xl font-bold leading-tight">
+            Salut, je suis <span className="text-emerald-400">Joel Simo</span> 👋
+            <br />
             Développeur Full-Stack
           </h1>
-          <p className="max-w-xl text-neutral-400">
-            Je suis développeur Full-Stack avec 3 ans d'expérience, utisant Laravel,
-            Cordova Apache et React, pour créer des applications web et mobiles performantes. Je suis passionné par la création de solutions innovantes et efficaces pour répondre aux besoins des utilisateurs.
+
+          <p className="mt-6 max-w-2xl text-lg text-neutral-400">
+            Je suis développeur Full-Stack avec 3 ans d'expérience utilisant
+            Laravel, Cordova Apache et React pour créer des applications web et
+            mobiles performantes. Je suis passionné par la création de solutions
+            innovantes et efficaces pour répondre aux besoins des utilisateurs.
           </p>
-          <div className="flex gap-4">
-            <Link
-              href="/projects"
-              className="rounded-lg bg-emerald-400 px-6 py-3 font-medium text-neutral-950 transition hover:bg-emerald-300"
+
+          <div className="mt-10">
+            <a
+              href="mailto:tonemail@gmail.com"
+              className="btn btn-accent flex w-full items-center justify-center gap-2 lg:w-fit"
             >
-              Voir mes projets
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-lg border border-neutral-700 px-6 py-3 font-medium transition hover:border-emerald-400"
-            >
-              Me contacter
-            </Link>
+              <Mail className="h-5 w-5" />
+              Contactez-moi
+            </a>
           </div>
         </div>
 
-        {/* Photo de profil avec effet de lueur */}
-        <div className="relative mx-auto h-72 w-72 sm:h-80 sm:w-80">
-          {/* Halo lumineux derrière la photo */}
-          <div className="absolute inset-0 rounded-full bg-emerald-400/30 blur-3xl" />
+        {/* Image */}
+        <div className="order-1 lg:order-2">
+          <div className="relative mx-auto h-72 w-72 sm:h-80 sm:w-80">
+            {/* Halo lumineux */}
+            <div className="absolute inset-0 rounded-full bg-emerald-400/30 blur-3xl" />
 
-          <div className="relative h-full w-full overflow-hidden rounded-full border border-emerald-400/40 shadow-[0_0_40px_rgba(52,211,153,0.35)]">
-            <Image
-              src="/images/profile.jpeg"
-              alt="Joel Simo - Développeur Full-Stack"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/40 via-transparent to-emerald-400/10" />
+            <div className="relative h-full w-full overflow-hidden rounded-full border border-emerald-400/40 shadow-[0_0_40px_rgba(52,211,153,0.35)]">
+              <Image
+                src="/images/profile.jpeg"
+                alt="Joel Simo - Développeur Full-Stack"
+                fill
+                priority
+                className="object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/40 via-transparent to-emerald-400/10" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Projets à la une */}
+      {/* Projets récents */}
       <section className="mt-24">
         <h2 className="text-2xl font-semibold">Projets récents</h2>
+
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.slice(0, 3).map((project) => (
             <ProjectCard key={project.slug} project={project} />
