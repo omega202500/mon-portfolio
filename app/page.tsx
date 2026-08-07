@@ -18,9 +18,8 @@ export default function Home() {
             Développeur Full-Stack
           </h1>
           <p className="max-w-xl text-neutral-400">
-            Je conçois des applications mobiles et web performantes avec Laravel,
-            Cordova/Capacitor et Next.js — du backend à l'interface, en passant
-            par les intégrations de paiement et le streaming en temps réel.
+            Je suis développeur Full-Stack avec 3 ans d'expérience, utisant Laravel,
+            Cordova Apache et React, pour créer des applications web et mobiles performantes. Je suis passionné par la création de solutions innovantes et efficaces pour répondre aux besoins des utilisateurs.
           </p>
           <div className="flex gap-4">
             <Link
