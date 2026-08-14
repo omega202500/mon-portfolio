@@ -4,9 +4,9 @@ export default function AboutPage() {
       <h1 className="text-3xl font-bold">À propos de moi</h1>
       <p className="mt-6 text-neutral-400">
         Développeur full-stack spécialisé dans les applications mobiles et web.
-        Je travaille principalement avec Laravel pour les backends, PostgreSQL
-        comme base de données, et Cordova/Capacitor pour les applications
-        mobiles hybrides. Côté frontend, j'utilise Next.js et JavaScript
+        Je travaille principalement avec Laravel et Node.js pour les backends, MySQL et PostgreSQL
+        comme base de données, et Cordova Apache pour les applications
+        mobiles hybrides. Côté frontend, j'utilise React, Next.js et JavaScript
         moderne pour construire des interfaces réactives.
       </p>
 
@@ -14,13 +14,13 @@ export default function AboutPage() {
       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
         {[
           "Laravel",
+          "Node.js",
           "MySQL",
           "PostgreSQL",
           "Next.js",
           "Cordova Apache",
-          "Node.js",
-          "React Native",
-          "FastAPI",
+          "React",
+          "JavaScript",
         ].map((skill) => (
           <div
             key={skill}

@@ -17,7 +17,7 @@ export default function Home() {
 
           <p className="mt-6 max-w-2xl text-lg text-neutral-400">
             Je suis développeur Full-Stack avec 3 ans d'expérience, utilisant
-            Laravel, Cordova Apache et React pour créer des applications web et
+            Laravel, Cordova Apache et React, Next.js et JavaScript pour créer des applications web et
             mobiles performantes. Je suis passionné par la création de solutions
             innovantes et efficaces pour répondre aux besoins des utilisateurs.
           </p>
