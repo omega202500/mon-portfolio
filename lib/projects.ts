@@ -60,7 +60,7 @@ description:
   title: "E-VOTE",
   description:
     "Application web de vote électronique conçue pour gérer l'ensemble du processus électoral, de l'inscription des électeurs à la publication des résultats. Elle permet la gestion des candidats, des scrutins et assure un suivi sécurisé des votes.",
-  stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript"],
+  stack: ["PHP pure", "MySQL", "Bootstrap", "JavaScript"],
   image: "/images/E-vote.png",
   link: "https://yami.infinityfreeapp.com/",
 
