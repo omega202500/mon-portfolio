@@ -52,7 +52,7 @@ description:
       "Application mobile de gestion de tontine rotative avec backend FastAPI/SQLAlchemy et frontend React Native/Expo, intégration PawaPay pour les paiements mobile money.",
     stack: ["FastAPI", "React Native", "Expo", "PawaPay"],
     image: "/images/tontine.jpeg",
-     link: "https://omega-tontine-app.vercel.app",
+     //link: "https://omega-tontine-app.vercel.app",
     // repo: "https://github.com/omega202500/tontine-app"
   },
   {
