@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "Application web de gestion de projets permettant de créer des projets, gérer les tâches, collaborer entre utilisateurs et suivre l'avancement en temps réel grâce à Next.js, React, Prisma et Clerk pour l'authentification.",
     stack: ["Next.js", "React", "Prisma", "Clerk", "SQLite"],
     image: "/images/taskflow.png",
-    link: "https://task-flow.vercel.app/",
+    link: "https://tashflow.vercel.app",
   },
    {
   slug: "expense-tracker",
