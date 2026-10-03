@@ -43,7 +43,7 @@ description:
     "Tailwind CSS"
   ],
   image: "/images/full-stack.png",
-  link: "https://taskflow.vercel.app/demo",
+  link: "https://full-stack-omega-jet.vercel.app",
 },
     {
     slug: "tontine",
