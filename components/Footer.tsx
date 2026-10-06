@@ -5,19 +5,10 @@ export default function Footer() {
       href: "https://www.linkedin.com/in/joël-simo-3a7582399",
       label: "LinkedIn",
     },
+ 
     {
-      icon: "fa-brands fa-facebook",
-      href: "https://facebook.com/joelomega",
-      label: "Facebook",
-    },
-    {
-      icon: "fa-brands fa-instagram",
-      href: "https://instagram.com/joelomega",
-      label: "Instagram",
-    },
-    {
-      icon: "fa-brands fa-square-twitter",
-      href: "https://twitter.com/tonpseudo",
+     icon: "fa-brands fa-whatsapp",
+      href: "https://wa.me/237656962880?text=Bonjour%2C%20je%20suis%20intéressé%20par%20vos%20services.",
       label: "Twitter",
     },
     {
